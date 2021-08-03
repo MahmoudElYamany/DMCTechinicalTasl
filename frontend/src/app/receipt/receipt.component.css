@@ -1,0 +1,125 @@
+
+.headerOrder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1rem 1rem;
+
+}
+.track {
+    position: relative;
+    background-color: #ddd;
+    height: 7px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 60px;
+    margin-top: 50px
+}
+
+.track .step {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 25%;
+    margin-top: -18px;
+    text-align: center;
+    position: relative
+}
+
+.track .step.active:before {
+    background: var(--primary-color)
+}
+
+.track .step::before {
+    height: 7px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    left: 0;
+    top: 18px
+}
+
+.track .step.active .icon {
+    background: var(--primary-color);
+    color: #fff
+}
+
+.track .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 100%;
+    background: #ddd
+}
+
+.track .step.active .text {
+    font-weight: 400;
+    color: #000
+}
+
+.track .text {
+    display: block;
+    margin-top: 7px
+}
+/***/
+.cart-item-thumb {
+    display: block;
+    width: 10rem
+}
+
+.cart-item-thumb>img {
+    display: block;
+    width: 100%
+}
+
+.product-card-title>a {
+    color: #222;
+}
+
+.font-weight-semibold {
+    font-weight: 600 !important;
+}
+
+.product-card-title {
+    display: block;
+    margin-bottom: .75rem;
+    padding-bottom: .875rem;
+    border-bottom: 1px dashed #e2e2e2;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.text-muted {
+    color: #888 !important;
+}
+
+.bg-secondary {
+    background-color: #f7f7f7 !important;
+}
+
+.accordion .accordion-heading {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.font-weight-semibold {
+    font-weight: 600 !important;
+}
+
+.product-description {
+    margin: 0 1rem 1rem 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+/***/
+.calculation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

@@ -1,0 +1,131 @@
+<div class="container-fluid">
+    <div class="row no-gutter ">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex bg-image rounded"></div>
+
+
+        <!-- The content half -->
+        <div class="col-md-6 bg-light rounded">
+            <div class="login d-flex align-items-center py-5">
+
+                <!-- Demo content-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4">Split page!</h3>
+                            <p class="text-muted mb-4">Create a login split page using Bootstrap 4.</p>
+
+                            <form #loginForm="ngForm" novalidate>
+                                <div class="row">
+                                    <div *ngIf="invalidregister" class="alert alert-danger"> Invalid Register try again</div>
+                                    <div class="form-group mb-3">
+                                        <input #FirstName="ngModel" id="FirstName" type="text"
+                                            [(ngModel)]="Data.firstName" name="firstName" placeholder="firstName"
+                                            required autofocus=""
+                                            class="form-control rounded-pill border-0 shadow-sm px-4">
+                                        <span *ngIf="FirstName.errors?.required&&FirstName.touched">*</span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input #LastName="ngModel" id="LastName" type="text" [(ngModel)]="Data.lastName"
+                                            name="LastName" placeholder="LastName" required autofocus=""
+                                            class="form-control rounded-pill border-0 shadow-sm px-4">
+                                        <span *ngIf="LastName.errors?.required&&LastName.touched">*</span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input #username="ngModel" id="inputEmail" type="text"
+                                            [(ngModel)]="Data.userName" name="usrname" placeholder="Username" required
+                                            autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                        <span *ngIf="username.errors?.required&&username.touched ">Username is
+                                            invalid</span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input #Phone="ngModel" name="Phone" [(ngModel)]="Data.phone"
+                                            [pattern]="mobNumberPattern" required class="form-control rounded-pill border-0 shadow-sm px-4"
+                                            placeholder="Phone" type="text" />
+                                        <span *ngIf="Phone.errors?.required&&Phone.touched">*</span>
+                                        <span *ngIf="Phone.errors?.pattern">
+                                            Mobile number not valid.
+                                        </span>
+
+                                    </div>
+                                    <div class="form-group mb-3">
+
+                                        <input #Dob="ngModel" name="DOB" [(ngModel)]="Data.birthdate" required
+                                        class="form-control rounded-pill border-0 shadow-sm px-4" placeholder="Date of birth" type="date" />
+                                        <span *ngIf="Dob.errors?.required&&Dob.touched">*</span>
+
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input #Email="ngModel" name="Email" [(ngModel)]="Data.Email" required
+                                        class="form-control rounded-pill border-0 shadow-sm px-4" placeholder="Email" type="email" />
+                                        <span *ngIf="Email.errors?.required&&Email.touched ">*</span>
+                                        <!-- <span *ngIf="Email.errors?.pattern">
+                                          Invalid Email
+                                        </span> -->
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input #password="ngModel" id="password" [(ngModel)]="Data.password"
+                                            name="password" type="password" placeholder="Password" required
+                                            class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                        <span *ngIf="password.errors?.required&&password.touched ">Password is
+                                            invalid</span>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input #CPassword="ngModel" name="CPassword" [(ngModel)]="Data.cpassword"
+                                            required class="form-control rounded-pill border-0 shadow-sm px-4" placeholder="Confirmed Password"
+                                            type="password" />
+                                        <span *ngIf="CPassword.errors?.required&&CPassword.touched">Password Must be
+                                            matched</span>
+                                    </div>
+                                </div>
+                                <div class=" form-group mb-3 row">
+                                    <div class="col-md-6 mb-3">
+                                        <select class="form-control rounded-pill border-0 shadow-sm px-4" #mySelect
+                                            (change)='selectChangeHandler(mySelect.value)' name="country"
+                                            [(ngModel)]="Data.countryid">
+                                            <option value="0"> Select country</option>
+                                            <option class='option' *ngFor='let country of countrylist'
+                                                [value]="country.country_id">
+                                                {{country.country_Name}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select class="form-control rounded-pill border-0 shadow-sm px-4" name="city"
+                                            [(ngModel)]="Data.cityid">
+                                            <option value="0"> Select City </option>
+                                            <option class='option' *ngFor="let city of citylist "
+                                                [value]="city.city_Id">{{city.city_Name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <fieldset>
+                                        <div class="some-class">
+                                          <input #Gender="ngModel" name="Gender" [(ngModel)]="Data.gender" required class="form-check-input pr-1 "
+                                            placeholder="Gender" type="radio" value="Male" />
+                                          <label for="Male" >Male</label>
+                                          <input #Gender="ngModel" name="Gender" [(ngModel)]="Data.gender" required class="form-check-input ms-4 pr-1"
+                                          placeholder="Gender" type="radio" value="Female" />
+                                          <label for="Female">Female</label>
+                                        </div>
+                                      </fieldset>
+                                      <span *ngIf="Gender.errors?.required&&Gender.touched">*</span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <!-- <button class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" (click)="BackToLogIn()">Back</button> -->
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="submit" (click)="SignUp()" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>

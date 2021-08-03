@@ -1,0 +1,61 @@
+<div class="headerOrder">
+    <h6>Order ID: {{invoiceId}}</h6>
+    <p-button icon="pi pi-file-pdf" [loading]="loading" (onClick)="exportPdf()"></p-button>
+</div>
+<article class="card">
+    <div class="card-body row">
+        <div class="col"> <strong>User Name:</strong> <br>{{invoiceDetial.userName}} </div>
+        <div class="col"> <strong>Country:</strong> <br>{{invoiceDetial.country}} </div>
+        <div class="col"> <strong>City:</strong> <br>{{invoiceDetial.city}} </div>
+    </div>
+    <div class="card-body row">
+        <div class="col"><strong>Address:</strong> <br> {{invoiceDetial.address}} </div>
+    </div>
+</article>
+<br><br>    
+<article class="card">
+    <div class="card-body row">
+        <div class="col"> <strong>Order time:</strong> <br>{{invoiceDetial.orderDate | date}} </div>
+        <div class="col"> <strong>Estimated Delivery time:</strong> <br>{{invoiceDetial.dueDate | date}} </div>
+        <div class="col"> <strong>Status:</strong> <br> {{selectedStatus}} </div>
+    </div>
+</article>
+<div class="track" >
+    <div class="step" [ngClass]="{'active':invoiceDetial.status>0}"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">{{status[0].state}}</span> </div>
+    <div class="step" [ngClass]="{'active':invoiceDetial.status>1}"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text"> {{status[1].state}}</span> </div>
+    <div class="step" [ngClass]="{'active':invoiceDetial.status>2}"> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text"> {{status[2].state}}</span> </div>
+    <div class="step" [ngClass]="{'active':invoiceDetial.status>3}"> <span class="icon"> <i class="fa fa-box"></i> </span> <span class="text"> {{status[3].state}}</span> </div>
+</div>
+<div class="row">
+    <div class="col-12 ">
+        <h2 class="h6 d-flex flex-wrap justify-content-between align-items-center px-4 py-3 bg-secondary">
+            <span>Products</span>
+        </h2>
+        <!-- Item-->
+        <div *ngFor="let i of invoiceDetial.items;let o = index"
+            class="d-lg-flex justify-content-between my-4 pb-4 border-bottom">
+            <div class="media d-block d-lg-flex text-center text-lg-left">
+                <a class="cart-item-thumb mx-auto mr-lg-4"><img [src]="'../../../assets/products/' + i.image" alt="Product"></a>
+                <div class="media-body pt-3">
+                    <h3 class="product-card-title font-weight-semibold border-0 pb-0">{{i.name}}</h3>
+                    <div class="font-size-sm"><span class="text-muted mr-2">Size:</span> {{i.size}} {{i.uom}}</div>
+                    <div class="font-size-sm"><span class="text-muted mr-2">Color:</span> {{i.color}}</div>
+                </div>
+            </div>
+            <div class="pt-2 pt-lg-0 pl-lg-3 mx-auto mx-lg-0 text-center text-lg-left" style="max-width: 10rem;">
+                <div class="font-size-sm"><span class="mr-3">Quantity</span></div>
+                <div class="font-size-sm"><span class="text-muted mr-3">{{invoiceDetial.quantity[o]}}</span></div>
+                <div class="font-size-sm"><span class="mr-3">Price</span></div>
+                <div class="font-size-lg text-primary pt-2">{{i.price}} L.E</div>
+            </div>
+        </div>
+    </div>
+    <div class="calculation">
+        <p><span class="font-weight-semibold">SubTotal: </span><span> {{subTotal}}</span> L.E</p>
+        <p><span class="font-weight-semibold">Discount: </span><span> {{invoiceDetial.discountvalue}}</span> %</p>
+        <p><span class="font-weight-semibold">Tax: </span><span> {{invoiceDetial.tax}}</span> %</p>
+        <p *ngIf="invoiceDetial.anotherCountry"><span class="font-weight-semibold">Shipping: </span><span > 100</span> L.E</p>
+        <p class="pb-2 border-bottom" *ngIf="invoiceDetial.paymentType=='Cash'"><span class="font-weight-semibold">PaymentMethod: </span><span > {{invoiceDetial.paymentType}}</span>(5 L.E)</p>
+        <p class="pb-2 border-bottom" *ngIf="invoiceDetial.paymentType=='Visa/Credit'"><span class="font-weight-semibold">PaymentMethod: </span><span > {{invoiceDetial.paymentType}}</span>(0 L.E)</p>
+        <p ><span class="font-weight-semibold">Total: </span><span> {{invoiceDetial.totalValue}}</span> L.E</p>
+    </div>

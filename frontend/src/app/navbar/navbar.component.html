@@ -1,0 +1,40 @@
+<!-- Sticky navbar-->
+<nav *ngIf="loginser.visible" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home">DMS Techicnal Task</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="#">Features</a>
+          </li>
+          <li class="nav-item pe-3">
+            <a class="nav-link" routerLink="#">Pricing</a>
+          </li> -->
+          <li class="nav-item">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button *ngIf="!isLoggedIn" type="button" class="btn btn-light" (click)="login()">login</button>
+                <button *ngIf="!isLoggedIn" type="button" class="btn btn-dark" (click)="signup()">Sign up</button>
+                <button *ngIf="isLoggedIn" type="button" class="btn btn-dark" (click)="logout()">logout</button>
+              </div>
+          </li>
+          <li class="ms-2 pt-1" *ngIf="isLoggedIn">
+           <i class="pi pi-bell me-4 p-text-secondary" pBadge style="font-size: 2rem" severity="danger" value="{{noInvoice}}" [disabled]="noInvoice === 0" (click)="op.toggle($event)"></i>
+            <a routerLink="/charts"> <i class="pi pi-shopping-cart me-4 p-text-secondary" pBadge style="font-size: 2rem" severity="danger" value="{{noCart}}" [disabled]="noCart === 0"></i></a>
+     
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<p-overlayPanel #op [dismissable]="true" [baseZIndex]=1000 [showCloseIcon]="true" [style]="{width: '250px'}">
+  <ng-template pTemplate>
+      <div *ngFor="let item of Invoice" class="text-center"><a routerLink="Receipt/{{item.orderHeaderID}}">{{item.orderHeaderID}}</a><hr></div>
+  </ng-template>
+</p-overlayPanel>

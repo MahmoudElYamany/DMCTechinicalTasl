@@ -1,0 +1,100 @@
+<div id="carouselExampleIndicators" class="carousel slide pb-4" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://dummyimage.com/900x250" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://dummyimage.com/900x250" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://dummyimage.com/900x250" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<p-dataView #dv [value]="products" [paginator]="true" [rows]="9" filterBy="name" [sortField]="sortField"
+  [sortOrder]="sortOrder" layout="grid">
+  <ng-template pTemplate="header">
+    <div class="d-flex justify-content-between flex-column flex-md-row jc-md-between">
+      <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price"
+        (onChange)="onSortChange($event)" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+      <span class="p-input-icon-left p-mb-2 p-mb-md-0">
+        <i class="pi pi-search"></i>
+        <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
+      </span>
+      <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+    </div>
+  </ng-template>
+  <ng-template let-product pTemplate="listItem">
+    <div class="p-col-12">
+      <div class="product-list-item">
+        <img [src]="'../../../assets/products/' + product.image" [alt]="product.name" />
+        <div class="product-list-detail">
+          <div class="product-name">{{product.name}}</div>
+          <div class="product-description">{{product.description}}</div>
+          <!-- <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating> -->
+          <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{product.category}}</span>
+        </div>
+        <div class="product-list-action">
+          <span class="product-price">${{product.price}}</span>
+          <p-button icon="pi pi-shopping-cart" label="Add to Cart" [disabled]="product.avaliable === 'OutStock'">
+          </p-button>
+          <span [class]="'product-badge status-' + product.avaliable|lowercase">{{product.avaliable}}</span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template let-product pTemplate="gridItem">
+    <div class="col-md-4">
+      <div class="product-grid-item card">
+        <div class="product-grid-item-top">
+          <div>
+            <i class="pi pi-tag product-category-icon"></i>
+            <span class="product-category">{{product.category}}</span>
+          </div>
+          <span [class]="'product-badge status-' + product.avaliable|lowercase">{{product.avaliable}}</span>
+        </div>
+        <div class="product-grid-item-content">
+          <img [src]="'../../../assets/products/' + product.image" [alt]="product.name" />
+          <div class="product-name" (click)="showModalDialog()">{{product.name}}</div>
+          <div class="product-description">{{product.description}}</div>
+        </div>
+        <div class="product-grid-item-bottom">
+          <span class="product-price">${{product.price}}</span>
+          <p-button icon="pi pi-shopping-cart" (click)='Shopping(product.id)'
+            [disabled]="product.avaliable === 'OutStock'"></p-button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-dataView>
+
+<p-dialog header="Header" [(visible)]="displayModal" [breakpoints]="{'960px': '75vw'}" [style]="{width: '50vw'}"
+  [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</p-dialog>
+
+<p-sidebar [(visible)]="visibleSidebar4" position="bottom" [baseZIndex]="10000">
+  <h3>You Must Login/Register First</h3>
+</p-sidebar>
