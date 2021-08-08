@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Services\\Services.csproj": {}
+    "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Services\\Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj": {
+    "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj",
+        "projectUniqueName": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj",
         "projectName": "Context",
-        "projectPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj",
+        "projectPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj",
         "packagesPath": "C:\\Users\\MahmoudELYamany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Context\\obj\\",
+        "outputPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Context\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
           "C:\\Users\\MahmoudELYamany\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -28,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj"
+              "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj": {
+                "projectPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj"
               }
             }
           }
@@ -44,6 +48,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -86,22 +94,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj": {
+    "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
+        "projectUniqueName": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
+        "projectPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\MahmoudELYamany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\obj\\",
+        "outputPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
           "C:\\Users\\MahmoudELYamany\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -176,22 +188,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Services\\Services.csproj": {
+    "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Services\\Services.csproj",
+        "projectUniqueName": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Services\\Services.csproj",
+        "projectPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\MahmoudELYamany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Services\\obj\\",
+        "outputPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
           "C:\\Users\\MahmoudELYamany\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -204,8 +220,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj": {
-                "projectPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj"
+              "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj": {
+                "projectPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Context\\Context.csproj"
               }
             }
           }
@@ -266,7 +282,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

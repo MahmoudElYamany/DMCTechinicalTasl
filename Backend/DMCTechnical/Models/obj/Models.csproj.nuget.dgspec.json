@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj": {}
+    "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj": {
+    "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
+        "projectUniqueName": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
+        "projectPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\MahmoudELYamany\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\obj\\",
+        "outputPath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
           "C:\\Users\\MahmoudELYamany\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -90,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

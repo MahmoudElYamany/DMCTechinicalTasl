@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kTZmDWZwKrOJ4f4qgvmmgr8K6tQQxk2PY1mG5J/k6BcP3hyThPReXSXTLQcrBWLXgvdpwNWEvDzhTt/75d1ePw==",
+  "dgSpecHash": "stmQJXBTvewreh9YIF5nuLsZBs8uMWOqTD3fpsEgNikvfhn6u5XlcoiqCRxhFPrUnkCJVXiMGc6wKwTI81K5hw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MahmoudELYamany\\Desktop\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
+  "projectFilePath": "B:\\Interview Tasks\\DMC\\DMC\\Backend\\DMCTechnical\\Models\\Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MahmoudELYamany\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\MahmoudELYamany\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
